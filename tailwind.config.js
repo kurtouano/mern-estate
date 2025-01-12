@@ -5,7 +5,14 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        DarkBlue: "#222831", // Adding the custom color
+        DarkGray: "#393E46",
+        Cyan: "#00ADB5",
+        OffWhite: "#EEEEEE",
+      },
+    },
   },
   plugins: [],
 }
