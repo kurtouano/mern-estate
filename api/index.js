@@ -1,11 +1,11 @@
-import express from "express";
+import express from "express"; 
 import mongoose from "mongoose";
-import dotenv from "dotenv";
+import dotenv from "dotenv"; // To hide MongoDB connection link. It is in the .env file
 dotenv.config();
 
 const app = express();
 
-mongoose
+mongoose //Connection to DB which is hidden
   .connect(process.env.MONGO)
   .then(() => {
     console.log("Connected to MongoDB");
