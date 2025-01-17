@@ -1,10 +1,9 @@
 import express from "express";
 import mongoose from "mongoose";
-import userRouter from "./routes/user.route.js";
+import testRouter from "./routes/test.route.js";
+import authRouter from "./routes/auth.route.js";
 import dotenv from "dotenv"; // To hide MongoDB connection link. It is in the .env file
 dotenv.config();
-
-const app = express();
 
 mongoose //Connection to DB which is hidden
   .connect(process.env.MONGO)
@@ -15,8 +14,13 @@ mongoose //Connection to DB which is hidden
     console.log(err);
   });
 
+const app = express();
+
+app.use(express.json()); // To parse JSON data
+
 app.listen(3000, () => {
   console.log("Server is Running on Port 3000");
 });
 
-app.use("/api/user", userRouter);
+app.use("/api/test", testRouter);
+app.use("/api/auth", authRouter);
