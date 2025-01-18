@@ -3,6 +3,7 @@ import mongoose from "mongoose";
 import testRouter from "./routes/test.route.js";
 import authRouter from "./routes/auth.route.js";
 import dotenv from "dotenv"; // To hide MongoDB connection link. It is in the .env file
+import e from "express";
 dotenv.config();
 
 mongoose //Connection to DB which is hidden
@@ -24,3 +25,13 @@ app.listen(3000, () => {
 
 app.use("/api/test", testRouter);
 app.use("/api/auth", authRouter);
+ 
+app.use((err, req, res, next) => { // Error handling Middleware
+  const statusCode = err.statusCode || 500;
+  const message = err.message || "Internal Server Error";
+  return res.status(statusCode).json({
+    success: false,
+    statusCode,
+    message
+  });
+})
