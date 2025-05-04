@@ -1,7 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,100..900;1,100..900&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+* {
+    font-family: "Public Sans", sans-serif;
+    padding: 0;
+    margin: 0;  
+}
+
 body {
+    box-sizing: border-box;
     background-color: rgb(241, 245, 241);
 }
