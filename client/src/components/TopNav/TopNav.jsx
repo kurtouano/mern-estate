@@ -1,6 +1,7 @@
-import { FaSearch } from "react-icons/fa";
+import { IoSearchOutline } from "react-icons/io5";
 import { Link } from "react-router-dom";
 import Mainlogo from "@/assets/main-icon.png";
+import "./TopNav.css";
 
 export default function TopNavComponent() {
   return (
@@ -14,15 +15,20 @@ export default function TopNavComponent() {
             <h1 className="topnav-header-name">HomeSeeker</h1> 
           </Link>
 
+          <form className="relative flex flex-row mx-8 text-base font-normal topnav-searchbox" action="/search" method="GET">
+            <input type='text' className="pl-9 pr-4 py-1 bg-offwhite rounded-xl focus-within:outline-none topnav-searchbox-input" placeholder="Search..."/>
+            <button type="submit" className="absolute left-3 top-[7px]"><IoSearchOutline className="topnav-search-icon"/></button>
+          </form>
         </nav>
-        <nav className="flex flex-row text-base max-w-4xl items-center topnav-right-items ">
-            <ul className="flex flex-row gap-8">
-              <li><Link to="/">Home</Link></li>
-              <li><Link to="/about">About</Link></li>
-              <li><Link to="/profile">Buy</Link></li>
-              <li><Link to="/profile">Rent</Link></li>
-              <li><Link to="/profile">List your property</Link></li>
-              <li><Link to="/profile">Sign in</Link></li>
+
+        <nav className="flex flex-row text-base max-w-4xl items-center topnav-right-items">
+            <ul className="flex flex-row gap-5 items-center">
+              <li className="px-3 py-1 rounded-md topnav-link"><Link to="/">Home</Link></li>
+              <li className="px-3 py-1 rounded-md topnav-link"><Link to="/about">About</Link></li>
+              <li className="px-3 py-1 rounded-md topnav-link"><Link to="/profile">Buy</Link></li>
+              <li className="px-3 py-1 rounded-md topnav-link"><Link to="/profile">Rent</Link></li>
+              <li className="px-3 py-1 rounded-xl orange-link"><Link to="/profile">List your property</Link></li>
+              <li className="px-3 py-1 rounded-md topnav-link"><Link to="/profile">Sign in</Link></li>
             </ul>
         </nav>
 
