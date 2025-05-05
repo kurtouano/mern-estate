@@ -4,7 +4,7 @@
 }
 
 .topnav-link:hover {
-    background-color: rgb(242, 242, 242);
+    background-color: #eeeeee;
 }
 
 .orange-link {
@@ -13,13 +13,4 @@
 
 .orange-link:hover {
     background-color: #f08629;
-}
-
-.topnav-searchbox-input {
-    color: #6e6e6e;
-}
-
-.topnav-search-icon {
-    stroke-width: 2px;
-    color: #6e6e6e;
 }
