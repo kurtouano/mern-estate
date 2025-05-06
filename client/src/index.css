@@ -9,6 +9,15 @@
     margin: 0;  
 }
 
+:root {
+    --main-orange: #E88730;
+    --sub-orange: #e7934a;
+    --off-white: #F5F2F0;
+    --higher-shadow: #9e9e9e;
+    --main-shadow: #cfcfcf;
+    --sub-shadow: #eeeeee;
+}
+
 body {
     box-sizing: border-box;
     /* background-color: rgb(241, 245, 241); */

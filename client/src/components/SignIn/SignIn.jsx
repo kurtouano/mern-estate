@@ -25,9 +25,17 @@ export default function SignInComponent() {
                 </div>
                 <div className="sign-in-input">
                     <label htmlFor="password">Password</label>
-                    <input type="password" name="password" placeholder="Password" id="password" required />
+                    <input type={showPassword ? "text" : "password"} name="password" placeholder="Password" id="password" required />
                     {showPassword ? <RxEyeOpen className="sign-in-show-pass-btn" onClick={togglePasswordVisibility} /> : <RxEyeClosed className="sign-in-show-pass-btn" onClick={togglePasswordVisibility}/> }
                 </div>
+                <div className="sign-in-forget-pass-container">
+                    <a href="" className="sign-in-forgot-pass">Forgot password?</a>
+                    <div className="sign-in-remember-me-container">
+                        <input type="checkbox" id="remember" name="remember"/>
+                        <label htmlFor="remember">Remember me</label>
+                    </div>
+                </div>
+
                 <button type="submit" className="sign-in-submit-btn">Sign in</button>
             </form>
 

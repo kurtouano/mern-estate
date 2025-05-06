@@ -2,7 +2,7 @@
     display: flex;
     flex-direction: column;
     max-width: 500px;
-    padding: 20px;
+    padding: 15px;
     margin: 40px auto;
 }
 
@@ -11,7 +11,7 @@
     font-weight: 600;
     text-align: center;
     width: 100%;
-    margin-bottom: 20px;
+    margin-bottom: 25px;
 }
 
 .sign-in-input {
@@ -29,17 +29,13 @@
 .sign-in-input input {
     width: 100%;
     padding: 15px;
-    border: 1px solid #E5E0DB;
+    border: 1px solid #d8d4d0;
     margin-bottom: 20px;
     border-radius: 10px;
 }
 
 .sign-in-input input:focus {
     outline: none;
-}
-
-.sign-input input::placeholder {
-    color: red;
 }
 
 .sign-in-show-pass-btn {
@@ -56,4 +52,29 @@
     padding: 12px 0;
     border-radius: 10px;
     font-weight: 700;
+    margin-top: 20px;
+}
+
+.sign-in-forget-pass-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.sign-in-remember-me-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-size: 14px;
+}
+
+.sign-in-remember-me-container input {
+    margin-right: 10px;
+}
+
+
+.sign-in-forgot-pass {
+    color: var(--higher-shadow);
+    font-size: 14px;
 }

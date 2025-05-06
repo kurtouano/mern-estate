@@ -12,5 +12,5 @@
 }
 
 .orange-link:hover {
-    background-color: #eb9244;
+    background-color: var(--sub-orange);
 }

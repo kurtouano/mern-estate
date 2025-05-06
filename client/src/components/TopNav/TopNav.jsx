@@ -24,8 +24,8 @@ export default function TopNavComponent() {
           </Link>
 
           <form className="relative flex flex-row mx-8 text-base font-normal topnav-searchbox" action="/search" method="GET">
-            <input type='text' className="pl-9 pr-4 w-[150px] lg:w-[200px] py-1 text-sm text-[#636363] lg:text-base bg-offwhite rounded-xl focus-within:outline-none topnav-searchbox-input" placeholder="Search"/>
-            <button type="submit" className="absolute left-3 top-[7px] text-[#636363]"><IoSearchOutline className="topnav-search-icon"/></button>
+            <input type='text' className="pl-9 pr-4 w-[150px] lg:w-[200px] py-1.5 text-sm text-[#494949] lg:text-base bg-offwhite rounded-xl focus-within:outline-none topnav-searchbox-input" placeholder="Search"/>
+            <button type="submit" className="absolute left-3 top-[9px] text-[#636363]"><IoSearchOutline className="topnav-search-icon"/></button>
           </form>
         </nav>
 
@@ -35,7 +35,7 @@ export default function TopNavComponent() {
             <Link to="/about"><li className="px-3 py-1.5 rounded-md topnav-link">About</li></Link>
             <Link to="/profile"><li className="px-3 py-1.5 rounded-md topnav-link">Buy</li></Link>
             <Link to="/profile"><li className="px-3 py-1.5 rounded-md topnav-link">Rent</li></Link>
-            <Link to="/profile"><li className="px-3 py-1.5 rounded-xl orange-link">List your property</li></Link>
+            <Link to="/profile"><li className="px-3 py-1.5 rounded-md orange-link">List your property</li></Link>
             <Link to="/sign-in"><li className="px-3 py-1.5 rounded-md bg-zinc-200 topnav-link">Sign in</li></Link>
             </ul>
         </nav>
