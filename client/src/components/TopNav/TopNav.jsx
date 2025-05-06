@@ -31,12 +31,12 @@ export default function TopNavComponent() {
 
         <nav className="hidden text-sm lg:text-base font-[500] md:flex flex-row lg:items-center topnav-right-items ">
             <ul className="flex flex-row gap-2 lg:gap-5 items-center whitespace-nowrap flex-nowrap">
-              <li className="px-3 py-1 rounded-md topnav-link"><Link to="/">Home</Link></li>
-              <li className="px-3 py-1 rounded-md topnav-link"><Link to="/about">About</Link></li>
-              <li className="px-3 py-1 rounded-md topnav-link"><Link to="/profile">Buy</Link></li>
-              <li className="px-3 py-1 rounded-md topnav-link"><Link to="/profile">Rent</Link></li>
-              <li className="px-3 py-1 rounded-xl orange-link"><Link to="/profile">List your property</Link></li>
-              <li className="px-3 py-1 rounded-md bg-offwhite"><Link to="/sign-in">Sign in</Link></li>
+            <Link to="/"><li className="px-3 py-1.5 rounded-md topnav-link">Home</li></Link>
+            <Link to="/about"><li className="px-3 py-1.5 rounded-md topnav-link">About</li></Link>
+            <Link to="/profile"><li className="px-3 py-1.5 rounded-md topnav-link">Buy</li></Link>
+            <Link to="/profile"><li className="px-3 py-1.5 rounded-md topnav-link">Rent</li></Link>
+            <Link to="/profile"><li className="px-3 py-1.5 rounded-xl orange-link">List your property</li></Link>
+            <Link to="/sign-in"><li className="px-3 py-1.5 rounded-md bg-zinc-200 topnav-link">Sign in</li></Link>
             </ul>
         </nav>
 
@@ -48,12 +48,12 @@ export default function TopNavComponent() {
         {burgerState && (
           <nav className="md:hidden absolute top-16 right-0 w-50 text-center bg-white shadow-md z-50">
             <ul className="flex flex-col px-5 py-3 gap-3">
-              <li><Link to="/" onClick={() => setBurgerState(false)}>Home</Link></li>
-              <li><Link to="/about" onClick={() => setBurgerState(false)}>About</Link></li>
-              <li><Link to="/profile" onClick={() => setBurgerState(false)}>Buy</Link></li>
-              <li><Link to="/profile" onClick={() => setBurgerState(false)}>Rent</Link></li>
-              <li><Link to="/profile" onClick={() => setBurgerState(false)} className="bg-orange-500 px-3 py-1 rounded-xl">List your property</Link></li>
-              <li><Link to="/sign-in" onClick={() => setBurgerState(false)}>Sign in</Link></li>
+            <Link to="/" onClick={() => setBurgerState(false)}><li>Home</li></Link>
+            <Link to="/about" onClick={() => setBurgerState(false)}><li>About</li></Link>
+            <Link to="/profile" onClick={() => setBurgerState(false)}><li>Buy</li></Link>
+            <Link to="/profile" onClick={() => setBurgerState(false)}><li>Rent</li></Link>
+            <Link to="/profile" onClick={() => setBurgerState(false)} className="bg-orange-500 px-3 py-1 rounded-xl"><li>List your property</li></Link>
+            <Link to="/sign-in" onClick={() => setBurgerState(false)}><li>Sign in</li></Link>
             </ul>
           </nav>
         )}
