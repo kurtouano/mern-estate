@@ -1,6 +1,7 @@
 import { useState } from "react";
-import "./SignIn.css";
+import "../shared/AuthForm.css";
 import { RxEyeClosed, RxEyeOpen} from "react-icons/rx";
+import { FcGoogle } from "react-icons/fc";
 
 export default function SignInComponent() {
     const [showPassword, setShowPassword] = useState(false);
@@ -29,14 +30,16 @@ export default function SignInComponent() {
                     {showPassword ? <RxEyeOpen className="sign-in-show-pass-btn" onClick={togglePasswordVisibility} /> : <RxEyeClosed className="sign-in-show-pass-btn" onClick={togglePasswordVisibility}/> }
                 </div>
                 <div className="sign-in-forget-pass-container">
-                    <a href="" className="sign-in-forgot-pass">Forgot password?</a>
                     <div className="sign-in-remember-me-container">
                         <input type="checkbox" id="remember" name="remember"/>
                         <label htmlFor="remember">Remember me</label>
                     </div>
+                    <a href="" className="sign-in-forgot-pass">Forgot password?</a>
                 </div>
 
                 <button type="submit" className="sign-in-submit-btn">Sign in</button>
+                <button type="submit" className="sign-in-google-btn"><FcGoogle className="sign-in-google-icon"/>Continue with Google</button>
+                <p className="sign-in-have-acc">Dont have an account? <a href="http://localhost:3000/sign-up">Sign up</a></p>
             </form>
 
         </main>

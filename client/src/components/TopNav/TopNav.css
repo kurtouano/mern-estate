@@ -4,7 +4,7 @@
 }
 
 .topnav-link:hover {
-    background-color: #eeeeee;
+    background-color: var(--lower-shadow);
 }
 
 .orange-link {
@@ -13,4 +13,12 @@
 
 .orange-link:hover {
     background-color: var(--sub-orange);
+}
+
+.top-nav-sign-in-link {
+    background-color: var(--lower-shadow);
+}
+
+.top-nav-sign-in-link:hover {
+    background-color: var(--sub-shadow);
 }
