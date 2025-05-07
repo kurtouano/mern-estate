@@ -11,7 +11,7 @@
     font-weight: 600;
     text-align: center;
     width: 100%;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
 }
 
 .sign-in-input {
@@ -29,7 +29,7 @@
 .sign-in-input input {
     width: 100%;
     padding: 15px;
-    border: 1px solid #d8d4d0;
+    border: 1px solid var(--sub-shadow);
     margin-bottom: 20px;
     border-radius: 10px;
 }
@@ -57,7 +57,7 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
 }
 
 .sign-in-remember-me-container {
@@ -73,7 +73,7 @@
 
 .sign-in-submit-btn {
     width: 100%;
-    background-color: #E88730;
+    background-color: var(--main-orange);
     padding: 10px 0;
     border-radius: 10px;
     font-weight: 700;

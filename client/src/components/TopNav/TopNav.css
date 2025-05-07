@@ -8,7 +8,7 @@
 }
 
 .orange-link {
-    background-color:#E88730;
+    background-color: var(--main-orange);;
 }
 
 .orange-link:hover {
