@@ -3,8 +3,6 @@ import bcrypt from "bcryptjs"; // Importing bcrypt to hash the password
 import { errorHandler } from "../utils/error.js";
 
 export const signup = async (req, res, next) => {
-  // Asyc for new user to be saved in the DB
-  // console.log(req.body);  Show data in the console
   const { username, email, password } = req.body;
   const hashedPassword = bcrypt.hashSync(password, 12); // Hash the password // The number is the number of rounds to hash the password (10-12 is recommended)
   const newUser = new User({ username, email, password: hashedPassword }); // User here is from the user.model.js
@@ -17,6 +15,17 @@ export const signup = async (req, res, next) => {
     next(error); // Send error to the error handling middleware
     // next(errorHandler(500, "Internal Server Error")); // This is another way to send a customized error message
   }
-  
-  
 };
+
+export const signin = async (req, res, next) => {
+  const { email, password } = req.body; 
+  
+  try {
+    const validUser = await User.findOne({ email }); // Find the user in the DB by email
+    if (!validUser) return next(errorHandler(404, "User not found")); 
+    const validPassword = bcrypt.compareSync(password, validUser.password); // Compare the password with the hashed password in the DB 
+    if (!validPassword) return next(errorHandler(400, "Incorrect Credentials!")); // If the password is wrong, send an error message
+  } catch (error) {
+    next(error); // Send error to the error handling middleware
+  }
+}
